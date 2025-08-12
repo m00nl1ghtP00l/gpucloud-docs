@@ -80,11 +80,60 @@ Open a web browser and navigate to "http://127.0.0.1:8000/".
 
 ---
 
+## White Labeling 
+
+### Basic Information 
+
+Open the file "mkdocs.yml" in your favorite IDE and update the values with your preferred name. Replace the boiler plate text "White Labeled GPU Cloud Provider" with your brand's name. 
+
+``` yaml 
+site_name: White Labeled GPU Cloud Provider
+site_author: Name of Admin
+site_description: >-
+  Product Documentation for White Labeled GPU Cloud Provider
+
+# Copyright
+copyright: Copyright &copy; 2025 GPU Cloud Provider
+
+nav:
+  - White Labeled GPU Cloud: index.md
+```
+
+### Favico and Logo
+
+The logo can be changed to a user-provided image (any type, incl. `*.png` and `*.svg`). Update the following lines in your `mkdocs.yml` file. 
+
+``` yaml 
+favicon: assets/favicon.png
+  icon:
+    logo: assets/logo.png 
+``` 
+
+--- 
+
+## Core Content 
+
+The core documentation content is in markdown files organized under **nav**. Feel free to update this content as required. 
+
+``` yaml 
+nav:
+  - White Labeled GPU Cloud: index.md
+  - Workspaces: workspace.md 
+  - Compute: 
+    - 'Overview': 'compute_overview.md'
+    - 'Pods': 'pods.md'
+    - 'Managed Kubernetes': 'k8s.md'
+  - Developer Tools: 
+    - 'Notebooks': 'notebook.md'
+  - Users:  access_control.md
+```
+
+--- 
 ## Delete/Cleanup Environment 
 
 Since we are using Virtual Environments, it is straightforward to cleanly remove all dependencies. Follow the steps below. 
 
-```
+``` bash 
 source venv/bin/activate
 pip freeze > requirements.txt
 pip uninstall -r requirements.txt -y
