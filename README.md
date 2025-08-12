@@ -33,7 +33,8 @@ We recommend using a virtual environment, which is an isolated Python runtime. A
 python3 -m venv rafay-venv
 ```
 
-### Check Dependencies 
+**Check Dependencies**
+
 A newly created virtual environment will not have any packages installed yet. You can verify by using the following command which should not produce any results. 
 
 ``` bash
