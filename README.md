@@ -39,8 +39,6 @@ pip3 install mkdocs-material
 pip3 install weasyprint pillow cairosvg mkdocs-glightbox 
 ```
 
---- 
-
 ## Use Local Dev Environment 
 
 ### Activate Env
@@ -78,8 +76,6 @@ INFO     -  [07:59:27] Serving on http://127.0.0.1:8000/
 
 Open a web browser and navigate to "http://127.0.0.1:8000/". 
 
----
-
 ## White Labeling 
 
 ### Basic Information 
@@ -109,8 +105,6 @@ favicon: assets/favicon.png
     logo: assets/logo.png 
 ``` 
 
---- 
-
 ## Core Content 
 
 The core documentation content is in markdown files organized under **nav**. Feel free to update this content as required. 
@@ -128,7 +122,6 @@ nav:
   - Users:  access_control.md
 ```
 
---- 
 ## Delete/Cleanup Environment 
 
 Since we are using Virtual Environments, it is straightforward to cleanly remove all dependencies. Follow the steps below. 
