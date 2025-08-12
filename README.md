@@ -36,7 +36,7 @@ pip3 install mkdocs-material
 ### Step5: Install Dependencies
 
 ``` bash 
-pip3 install weasyprint pillow cairosvg mkdocs-lightbox 
+pip3 install weasyprint pillow cairosvg mkdocs-glightbox 
 ```
 
 --- 
