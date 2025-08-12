@@ -14,7 +14,17 @@ git clone https://github.com/RafaySystems/gpucloud-docs.git
 ```
 
 ### Step 2: Download/Install Python 
-If not already installed, Download and Install Python 3.x. We will be using “pip3” (Python’s package manager) to install the required packages. 
+If not already installed, [Download](https://www.python.org/downloads/) and Install Python 3.1.x. We will be using “pip3” (Python’s package manager) to install the required packages. You can optionally check if this was installed correctly by typing the following command 
+
+```
+python3 --version
+```
+
+You should see something like as the result 
+
+```
+Python 3.13.5
+```
 
 ### Step 3: Create Virtual Environment
 We recommend using a virtual environment, which is an isolated Python runtime. Any Python packages that you install or upgrade will be local and isolated to the environment. 
