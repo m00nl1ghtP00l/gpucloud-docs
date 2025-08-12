@@ -120,7 +120,7 @@ favicon: assets/favicon.png
     logo: assets/logo.png 
 ``` 
 
-## Core Content 
+### Core Content 
 
 The core documentation content is in markdown files organized under **nav**. Feel free to update this content as required. 
 
@@ -136,6 +136,14 @@ nav:
     - 'Notebooks': 'notebook.md'
   - Users:  access_control.md
 ```
+
+## Deploy Docs
+
+Whitelabeled documentation can be deployed to a variety of [locations](https://squidfunk.github.io/mkdocs-material/publishing-your-site/). Popular ones are
+
+1. Cloudflare
+2. Netlify 
+
 
 ## Delete/Cleanup Environment 
 
