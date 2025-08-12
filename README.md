@@ -9,6 +9,10 @@ Follow the steps below to create a local dev environment.
 ### Step 1: Fork/Clone Git Repo
 Once you get access to it, Fork & Clone the Git repository
 
+```
+git clone https://github.com/RafaySystems/gpucloud-docs.git
+```
+
 ### Step 2: Download/Install Python 
 If not already installed, Download and Install Python 3.x. We will be using “pip3” (Python’s package manager) to install the required packages. 
 
