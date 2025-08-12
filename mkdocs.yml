@@ -134,9 +134,10 @@ nav:
   - White Labeled GPU Cloud: index.md
   - Workspaces: workspace.md 
   - Compute: 
-    - 'Overview': 'compute_overview.md'
-    - 'Pods': 'pods.md'
-    - 'Managed Kubernetes': 'k8s.md'
-  - Developer Tools: 
-    - 'Notebooks': 'notebook.md'
+    - Serverless Pods: 
+      - 'Configure & Use': 'compute/pods/config_pods.md'
+    - Managed Kubernetes: 
+      - 'Configure & Use': 'compute/k8s/config_k8s.md'
+  - AI/ML Apps: 
+    - 'Notebooks': 'apps/notebook/config_nb.md'
   - Users:  access_control.md

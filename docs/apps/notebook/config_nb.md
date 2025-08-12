@@ -11,7 +11,7 @@ It is extremely common for data scientists and researchers to use Jupyter notebo
 
 Click on **New Notebook** to create a new notebook. 
 
-![New Notebook](img/notebook/new_notebook.png)
+![New Notebook](img/new_notebook.png)
 
 ---
 
@@ -19,7 +19,7 @@ Click on **New Notebook** to create a new notebook.
 
 As a first step, provide a name for the notebook and select the workspace where you would it to be deployed. 
 
-![Configure Notebook](img/notebook/configure_notebook_name.png)
+![Configure Notebook](img/configure_notebook_name.png)
 
 --- 
 
@@ -30,7 +30,7 @@ Now, specify the GPU resources you would like to provide the notebook. Select fr
 - Number of GPUs
 - GPU Model/Type (i.e. node type)
 
-![Notebook Resources](img/notebook/notebook_resources.png)
+![Notebook Resources](img/notebook_resources.png)
 
 --- 
 ### Notebook Profiles
@@ -49,7 +49,7 @@ A notebook profile maps to a notebook pre-installed and pre-configured with the 
 
 Select the profile you would like to use with your notebook from the provided dropdown list. 
 
-![Notebook Profile](img/notebook/select_profile.png)
+![Notebook Profile](img/select_profile.png)
 
 
 ---
@@ -58,7 +58,7 @@ Select the profile you would like to use with your notebook from the provided dr
 
 Clicking on the notebooks menu will list of all the notebooks the user has access to. Note that notebooks may be deployed to different workspaces. To view details about a specific notebook, users just need to click on the name of the notebook.
 
-![View Notebook](img/notebook/view_notebook.png)
+![View Notebook](img/view_notebook.png)
 
 
 ---
@@ -67,7 +67,7 @@ Clicking on the notebooks menu will list of all the notebooks the user has acces
 
 Once a notebook has been successfully deployed, the user can access and use it. They are presented with the **URL for the notebook** and a **token (authentication credentials)** to securely access the notebook. To access the notebook, the user can either click on the URL or copy/paste it into a web browser.
 
-![Access Notebook](img/notebook/access_notebook.png)
+![Access Notebook](img/access_notebook.png)
 
 !!! info
     Users need to provide the access token as a credential before they can access the Jupyter notebook.
@@ -79,7 +79,7 @@ Once a notebook has been successfully deployed, the user can access and use it. 
 
 To delete a notebook, users should click on the ellipses on the far right of the selected notebook and select delete.
 
-![Delete Notebook](img/notebook/delete_notebook.png)
+![Delete Notebook](img/delete_notebook.png)
 
 !!! info
     Once deletion has been initiated, it cannot be stopped or reversed. Users can create a new notebook if required.
