@@ -47,13 +47,13 @@ pip3 install weasyprint pillow cairosvg mkdocs-glightbox
 Ensure you have activated the virtual environment before you can use it. In Terminal, ensure you are in the correct folder before executing the following. 
 
 ``` bash 
-. venv/bin/activate
+. rafay-venv/bin/activate
 ```
 
 If this was activated correctly, you should see the the name (venv) preflixed in your terminal. 
 
 ``` bash 
-(venv) mohan.a@mohanas-MacBook-Pro Documents %
+(rafay-venv) mohan.a@mohanas-MacBook-Pro Documents %
 ```
 
 ### Run MkDocs Server 
