@@ -108,7 +108,7 @@ description: Accelerate your AI/ML and GenAI Initiatives
 
     ---
 
-    Centralized management of users, policies, and resources by the Tenant Administration
+    Centralized management of users, policies, and resources by the Org Administrators. 
 
     [**Orgs/Tenants**](admins/orgs.md)
     [ | ]()
