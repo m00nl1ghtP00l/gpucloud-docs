@@ -98,16 +98,16 @@ Open a web browser and navigate to "http://127.0.0.1:8000/".
 Open the file "mkdocs.yml" in your favorite IDE and update the values with your preferred name. Replace the boiler plate text "White Labeled GPU Cloud Provider" with your brand's name. 
 
 ``` yaml 
-site_name: White Labeled GPU Cloud Provider
-site_author: Name of Admin
+site_name: ACME GPU Cloud Provider
+site_author: admin@acme.com
 site_description: >-
-  Product Documentation for White Labeled GPU Cloud Provider
+  User Documentation
 
 # Copyright
-copyright: Copyright &copy; 2025 GPU Cloud Provider
+copyright: Copyright &copy; 2025 ACME GPU Cloud Provider
 
 nav:
-  - White Labeled GPU Cloud: index.md
+  - Overview: index.md
 ```
 
 ### Favico and Logo
