@@ -2,7 +2,7 @@
 hide:
   - navigation
   - toc
-title: Compute Cloud - Managed Kubernetes Clusters as a Service 
+title: Managed Kubernetes Clusters
 description: A fully managed, Kubernetes based container orchestrator optimized for modern AI workloads.
 tags:
   - Kubernetes 
@@ -114,7 +114,7 @@ function filterCards(category) {
 </script>
 
 <div class="hero-banner">
-  <h1>Managed Kubernetes Clusters as a Service</h1>
+  <h1>Managed Kubernetes Clusters</h1>
   <p>GPU-accelerated, fully managed container orchestrator optimized for modern AI workloads</p>
 </div>
 

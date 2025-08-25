@@ -1,12 +1,11 @@
 
 # Project information
-site_name: White Labeled GPU Cloud Provider
-site_author: Name of Admin
+site_name: ACME GPU Cloud
+site_author: admin@acme.com
 site_description: >-
-  Product Documentation for White Labeled GPU Cloud Provider
-
+  User Documentation
 # Copyright
-copyright: Copyright &copy; 2025 GPU Cloud Provider
+copyright: Copyright &copy; 2025 ACME GPU Cloud
 
 # Configuration
 theme:
@@ -70,15 +69,6 @@ plugins:
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
 
-# Additional configuration
-extra:
-  status:
-    new: Recently added
-    deprecated: Deprecated
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
-
 # Extensions
 markdown_extensions:
   - abbr
@@ -131,14 +121,40 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - White Labeled GPU Cloud: index.md
-  - Workspaces: workspace.md 
-  - Compute: 
+  - Overview: index.md
+  - AI Compute: 
+    - Bare Metal Server: 
+      - 'Overview': 'compute/bm/overview.md'
+      - 'Use Cases': 'compute/bm/usecases.md'
+      - 'Capabilities': 'compute/bm/capabilities.md'
+      - 'Configurations': 'compute/bm/configs.md'
+      - 'Metrics':
+        - 'Approach': 'compute/bm/metrics/approach.md'
+        - 'Dashboards': 'compute/bm/metrics/dashboards.md'
+    - Virtual Machine (VM): 
+      - 'Overview': 'compute/vm/overview.md'
+      - 'Use Cases': 'compute/vm/usecases.md'
+      - 'Capabilities': 'compute/vm/capabilities.md'
+      - 'Configurations': 'compute/vm/configs.md'
+      - 'Metrics':
+        - 'Approach': 'compute/vm/metrics/approach.md'
+        - 'Dashboards': 'compute/vm/metrics/dashboards.md'
     - Serverless Pods: 
       - 'Configure & Use': 'compute/pods/config_pods.md'
     - Managed Kubernetes: 
       - 'Overview': 'compute/k8s/overview.md'
+      - 'Capabilities': 'compute/k8s/capabilities.md'
       - 'Configure & Use': 'compute/k8s/config_k8s.md'
-  - AI/ML Apps: 
-    - 'Notebooks': 'apps/notebook/config_nb.md'
-  - Users:  access_control.md
+  - AI Tools & Apps: 
+    - Jupyter Notebooks: 
+      - 'Overview': 'apps/notebook/config_nb.md'
+    - Inference: 
+      - 'Overview': 'apps/inference/overview.md'
+  - End Users: 
+    - 'Overview': 'enduser/overview.md' 
+    - 'Access': 'enduser/access.md' 
+    - 'Workspaces': 'enduser/workspace.md' 
+  - Tenant Administration:  
+    - 'Orgs': 'admins/orgs.md'
+    - 'Multiple Orgs': 'admins/multi_orgs.md'
+    - 'Roles': 'admins/access_control.md'
