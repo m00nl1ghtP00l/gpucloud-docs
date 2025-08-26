@@ -112,12 +112,11 @@ nav:
 
 ### Favico and Logo
 
-The logo can be changed to a user-provided image (any type, incl. `*.png` and `*.svg`). Update the following lines in your `mkdocs.yml` file. 
+The logo can be changed to a user-provided image (any type, incl. `*.png` and `*.svg`). Copy the logo and favicon files to the assets folder, update the following lines in your `mkdocs.yml` file. 
 
 ``` yaml 
 favicon: assets/favicon.png
-  icon:
-    logo: assets/logo.png 
+logo: assets/logo.png 
 ``` 
 
 ### Core Content 
