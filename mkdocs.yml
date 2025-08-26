@@ -60,9 +60,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  #favicon: assets/favicon.png
-  #icon:
-  #  logo: assets/logo.png
+  #favicon: assets/rafay-favico.svg
+  #logo: assets/rafay-logo.svg
 
 # Plugins
 plugins:
@@ -86,8 +85,8 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
       emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -122,8 +121,8 @@ markdown_extensions:
 # Page tree
 nav:
   - Overview: index.md
-  - AI Compute: 
-    - Bare Metal Server: 
+  - AI Compute:
+    - Bare Metal Server:
       - 'Overview': 'compute/bm/overview.md'
       - 'Use Cases': 'compute/bm/usecases.md'
       - 'Capabilities': 'compute/bm/capabilities.md'
@@ -131,7 +130,7 @@ nav:
       - 'Metrics':
         - 'Approach': 'compute/bm/metrics/approach.md'
         - 'Dashboards': 'compute/bm/metrics/dashboards.md'
-    - Virtual Machine (VM): 
+    - Virtual Machine (VM):
       - 'Overview': 'compute/vm/overview.md'
       - 'Use Cases': 'compute/vm/usecases.md'
       - 'Capabilities': 'compute/vm/capabilities.md'
@@ -139,22 +138,22 @@ nav:
       - 'Metrics':
         - 'Approach': 'compute/vm/metrics/approach.md'
         - 'Dashboards': 'compute/vm/metrics/dashboards.md'
-    - Serverless Pods: 
+    - Serverless Pods:
       - 'Configure & Use': 'compute/pods/config_pods.md'
-    - Managed Kubernetes: 
+    - Managed Kubernetes:
       - 'Overview': 'compute/k8s/overview.md'
       - 'Capabilities': 'compute/k8s/capabilities.md'
       - 'Configure & Use': 'compute/k8s/config_k8s.md'
-  - AI Tools & Apps: 
-    - Jupyter Notebooks: 
+  - AI Tools & Apps:
+    - Jupyter Notebooks:
       - 'Overview': 'apps/notebook/config_nb.md'
-    - Inference: 
+    - Inference:
       - 'Overview': 'apps/inference/overview.md'
-  - End Users: 
-    - 'Overview': 'enduser/overview.md' 
-    - 'Access': 'enduser/access.md' 
-    - 'Workspaces': 'enduser/workspace.md' 
-  - Tenant Administration:  
+  - End Users:
+    - 'Overview': 'enduser/overview.md'
+    - 'Access': 'enduser/access.md'
+    - 'Workspaces': 'enduser/workspace.md'
+  - Tenant Administration:
     - 'Orgs': 'admins/orgs.md'
     - 'Multiple Orgs': 'admins/multi_orgs.md'
     - 'Roles': 'admins/access_control.md'
