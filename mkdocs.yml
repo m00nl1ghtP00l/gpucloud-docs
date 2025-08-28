@@ -157,3 +157,7 @@ nav:
     - 'Orgs': 'admins/orgs.md'
     - 'Multiple Orgs': 'admins/multi_orgs.md'
     - 'Roles': 'admins/access_control.md'
+    - 'Projects': 'admins/projects.md'
+    - 'Users': 'admins/users.md'
+    - 'Groups': 'admins/groups.md'
+    - 'Quota Management': 'admins/quotas.md'
