@@ -41,6 +41,9 @@ A newly created virtual environment will not have any packages installed yet. Yo
 pip3 freeze
 ```
 
+> [!IMPORTANT]
+> You do not have to create the virtual environment everytime. Activate the environment instead by following the steps in the section below
+
 ### Step 4: Install Mkdocs Material
 We use [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). This is a powerful documentation framework on top of MkDocs, a static site generator for project documentation. Since the raw content is markdown and PNG files, users can 
 
