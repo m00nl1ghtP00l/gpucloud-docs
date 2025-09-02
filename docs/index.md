@@ -113,6 +113,11 @@ description: Accelerate your AI/ML and GenAI Initiatives
     [**Orgs/Tenants**](admins/orgs.md)
     [ | ]()
     [**Access Control**](admins/access_control.md)
-
+    [ | ]()
+    [**Users**](admins/users.md)
+    [ | ]()
+    [**Groups**](admins/groups.md)
+    [ | ]()
+    [**Projects**](admins/projects.md)
 
 </div>

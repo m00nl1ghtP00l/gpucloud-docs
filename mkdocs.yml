@@ -153,10 +153,10 @@ nav:
     - 'Overview': 'enduser/overview.md'
     - 'Access': 'enduser/access.md'
     - 'Workspaces': 'enduser/workspace.md'
-    - 'Projects': 'enduser/projects.md'
-    - 'Users': 'enduser/users.md'
-    - 'Groups': 'enduser/groups.md'
   - Tenant Administration:
     - 'Orgs': 'admins/orgs.md'
     - 'Multiple Orgs': 'admins/multi_orgs.md'
     - 'Access Control': 'admins/access_control.md'
+    - 'Projects': 'admins/projects.md'
+    - 'Users': 'admins/users.md'
+    - 'Groups': 'admins/groups.md'
