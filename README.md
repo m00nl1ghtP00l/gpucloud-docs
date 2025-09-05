@@ -2,6 +2,10 @@
 
 GPU Cloud Providers that are looking to launch their service will require end user facing documentation. This Git repository contains a starting point for end user facing documentation that GPU Clouds can whitelabel and launch in hours. 
 
+The image below shows what the main navigation page would look like. 
+
+![Docs Screenshot](img/enduser_docs.png)
+
 --- 
 ## Local Development Environment 
 Follow the steps below to create a local dev environment. 
