@@ -1,6 +1,6 @@
 ---
 title: KOP Integrations - Ping One
-description: Official Rafay product documentation. Explore "KOP Integrations - Ping One" docs and more here. Rafay is a SaaS-first Kubernetes Operations Platform with enterprise-class scalability.
+description: Documentation for integrating Ping One with your organization for Single Sign On (SSO).
 tags:
   - Ping
   - IdP
@@ -31,7 +31,7 @@ Follow the steps documented below to integrate your Org and PingOne Tenant for S
 - Optionally, toggle "Include Authentication Context" if you wish to send/receive auth context information in assertion
 - Click on Save & Continue
 
-![Create IdP](img/ping/rafay_idp_detail.png)
+![Create IdP](img/ping/idp_detail.png)
 
 !!! Important
 	Encrypting SAML assertions is optional because privacy is already provided at the transport layer using HTTPS. Encrypted assertions provide an additional layer of security on top ensuring that only the SP (Org on Controller) can decrypt the SAML assertion.
@@ -49,7 +49,7 @@ The IdP configuration wizard will display critical information that you need to 
 - Consumer Binding
 - Click on Save & Continue to go to Metadata Configuration page
 
-![View SP Details](img/ping/rafay_sp_details.png)
+![View SP Details](img/ping/sp_details.png)
 
 ---
 
@@ -71,7 +71,7 @@ In the Application Details page:
 - Upload the Logo
 - Click Continue to Next Step
 
-![Application Details](img/ping/ping_general_settings.png)
+![Application Details](img/ping/ping_general_setting.png)
 
 ---
 
@@ -83,7 +83,7 @@ In the Application Configuration Page:
 - Copy/Paste the Assertion Consumer Service URL from Step 2 into the "Assertion Consumer Service (ACS)"
 - Copy/Paste the SP Entity ID from Step 2 into the "Entity ID"
 
-![Configure SAML](img/ping/ping_configure_saml.png)
+![Configure SAML](img/ping/pingconfigure_saml.png)
 
 If Encrypted SAML Assertion is enabled in Step 1,
 
@@ -105,7 +105,7 @@ In SSO Attribute Mapping page:
 
 The SSO Attribute Mapping configuration step for Groups is critical because it will ensure that PingOne will send the groups the user belongs to as part of the SSO process. We use the group information to transparently map users to the correct group/role.
 
-![Group Attribute](img/ping/ping_group_attributes.png)
+![Group Attribute](img/ping/ping_group_attribute.png)
 
 ---
 
@@ -119,7 +119,7 @@ In PingOne, make sure to configure SAML Subject to use Email in the SSO Attribut
 - Select "Email" from "Identity Bridge Attribute or Literal Value" list
 - Click Continue to Next Step to to to Group Access Page
 
-![NameID Attribute](img/ping/ping_nameid_email.png)
+![NameID Attribute](img/ping/nameid_email.png)
 
 ---
 
@@ -136,11 +136,11 @@ In the example above, the PingOne group "SystemAdmins" has been assigned to the 
 
 An identical named group needs to be created in your Org. Ensure that this group is mapped to the appropriate Projects with the correct privileges. In the example below, the Group "SystemAdmins" is configured as an "Organization Admin" with access to all Projects.
 
-![Assign Groups](img/ping/rafay_group_ping.png)
+![Assign Groups](img/ping/group_ping.png)
 
 It is important to emphasize that because of SSO via PingOne, user lifecycle management can be completely offloaded to the IdP. In the example below, note that there are no users managed in the "SystemAdmins" group because they are all managed in the attached PingOne Org.
 
-![Users in Group](img/ping/rafay_group_ping_no_users.png)
+![Users in Group](img/ping/group_ping_no_users.png)
 
 ---
 
@@ -158,6 +158,6 @@ In PingOne Review setup page:
 - SAVE the IdP Settings
 
 
-![Save IdP Config](img/ping/rafay_complete_regn.png)
+![Save IdP Config](img/ping/complete_regn.png)
 
 ---

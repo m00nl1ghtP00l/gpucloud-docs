@@ -1,6 +1,12 @@
 ---
-title: KOP CLI - IDP (Identity providers) Integration
-description: Official Rafay product documentation. Explore "KOP CLI - IDP Integration" docs and more here. Rafay is a SaaS-first Kubernetes Operations Platform with enterprise-class scalability.
+title: KOP CLI - IDP (Identity Providers) Integration
+description: Official product documentation for IDP integration using the KOP CLI.
+tags:
+  - CLI
+  - Identity Provider
+  - SSO
+  - IDP Integration
+  - Automation
 ---
 
 

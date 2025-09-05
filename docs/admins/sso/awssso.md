@@ -65,7 +65,7 @@ On the **Configure Custom SAML 2.0 application** page, go to the **Details** sec
 - Provide a display name for the web console  
 - Optionally add a description  
 
-![Configure SAML](img/awssso/awssso_configure_saml1.png)
+![Configure SAML](img/awssso/awsssoconfigure_saml1.png)
 
 In the **Application metadata** section:
 
@@ -74,7 +74,7 @@ In the **Application metadata** section:
 - Copy/paste the Entity ID from Step 2 to **Application SAML audience**  
 - Save changes  
 
-![Configure SAML](img/awssso/awssso_configure_saml2.png)
+![Configure SAML](img/awssso/awsssoconfigure_saml2.png)
 
 Go to the **Attribute mappings** tab:
 
@@ -84,16 +84,16 @@ Go to the **Attribute mappings** tab:
 - For the group attribute, enter the user attribute that you want to send to the application (e.g., static text `OrgAdmin`, `${user:groups}`, or another custom attribute)  
 - Save changes  
 
-![Configure SAML](img/awssso/awssso_configure_saml3.png)
+![Configure SAML](img/awssso/awsssoconfigure_saml3.png)
 
 Go to the **Assign users** tab:
 
-- Click on **Assign Users**  
+- Click on **Assigned Users**  
 - On the **Users** tab, select the users to allow access to the application  
 - On the **Groups** tab, select the groups that should have access  
 
-![Configure SAML](img/awssso/awssso_configure_saml4.png)  
-![Configure SAML](img/awssso/awssso_configure_saml5.png)
+![Configure SAML](img/awssso/awsssoconfigure_saml4.png)  
+![Configure SAML](img/awssso/awsssoconfigure_saml5.png)
 
 ---
 
@@ -117,7 +117,7 @@ Go to the **Assign users** tab:
 - Select the **Configuration** tab  
 - Download the AWS SSO SAML metadata file or copy the Metadata URL  
 
-![IdP Metadata](img/awssso/awssso_idp_metadata.png)
+![IdP Metadata](img/awssso/awsssoidp_metadata.png)
 
 - Return to the console’s IdP configuration wizard  
 - Go to the **Metadata Configuration** tab  
@@ -125,10 +125,10 @@ Go to the **Assign users** tab:
 - Upload the downloaded AWS SSO IdP Metadata file  
 - Complete IdP Registration  
 
-![Create App Integration](img/awssso/complete_regn.png)
+![Create App Integration](img/awssso/completeregn.png)
 
 - Once complete, you can view details about the IdP configuration on the Identity Provider page and edit/update if required.  
 
-![Completed IdP](img/awssso/idp_complete.png)
+![Completed IdP](img/awssso/idpcomplete.png)
 
 ---

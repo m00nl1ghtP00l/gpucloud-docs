@@ -1,8 +1,8 @@
 ---
 title: KOP Integrations - Okta
-description: Official Rafay product documentation. Explore "KOP Integrations - Okta" docs and more here. Rafay is a SaaS-first Kubernetes Operations Platform with enterprise-class scalability.
+description: Official product documentation. Explore "KOP Integrations - Okta" docs and more here.
 tags:
-  - Okta 
+  - Okta
   - IdP
   - Single Sign On (SSO)
 ---
@@ -31,7 +31,7 @@ Follow the steps documented below to integrate your Org and Okta Organizations f
 - Optionally, toggle "Include Authentication Context" if you wish to send/receive auth context information in assertion
 - Click on Save & Continue
 
-![Create IdP](img/okta/rafay_idp_detail.png)
+![Create IdP](img/okta/idp_detail.png)
 
 !!! Important
 	Encrypting SAML assertions is optional because privacy is already provided at the transport layer using HTTPS. Encrypted assertions provide an additional layer of security on top ensuring that only the SP (Org) can decrypt the SAML assertion.
@@ -45,7 +45,7 @@ The IdP configuration wizard will display critical information that you need to 
 - SP Entity ID
 - Name ID Format
 
-![View SP Details](img/okta/rafay_sp_details.png)
+![View SP Details](img/okta/sp_details.png)
 
 ---
 
@@ -67,7 +67,7 @@ In step 1 of the application configuration wizard
 - Provide an App Name for the Web Console
 - Upload the Logo
 
-![General Settings](img/okta/okta_general_settings.png)
+![General Settings](img/okta/okta_general_setting.png)
 
 ---
 
@@ -79,7 +79,7 @@ In step 2 of the application configuration wizard
 - Copy/Paste the SP Entity ID from Step 2
 - Select "Email Address" in the Name ID format dropdown
 
-![Configure SAML](img/okta/okta_configure_saml.png)
+![Configure SAML](img/okta/okta_configures_saml.png)
 
 In the Group Attribute Statements section,
 - Provide the name for the "Group", select the "Matches regex" filter and ".*" for the value.
@@ -99,20 +99,20 @@ Complete the Feedback portion of the Okta app wizard.
 
 Copy the "Identity Provider Metadata" URL from the App
 
-![IdP Metadata](img/okta/okta_idp_metadata.png)
+![IdP Metadata](img/okta/okta_idp_metadatas.png)
 
 - Navigate back to the Web Console's IdP configuration wizard
 - Paste the Identity Provider Metadata URL from Okta
 - Complete IdP Registration
 
 
-![Create App Integration](img/okta/rafay_complete_regn.png)
+![Create App Integration](img/okta/complete_regn.png)
 
 - Once this process is complete, you can view details about the IdP configuration on the Identity Provider page.
 - You can also edit and update the configuration if required.  
 
 
-![Completed IdP](img/okta/rafay_idp_complete.png)
+![Completed IdP](img/okta/idp_complete.png)
 
 
 ---
@@ -121,14 +121,14 @@ Copy the "Identity Provider Metadata" URL from the App
 
 Once your Org and Okta are integrated using the steps documented above, customers need to create and assign "Groups" in Okta to the application. Multiple Okta users can be added/removed from this group.
 
-![Assign Groups](img/okta/okta_app_assignments.png)
+![Assign Groups](img/okta/okta_app_assignment.png)
 
 An identical named group needs to be created on your Org. Ensure that this group is mapped to the appropriate Projects with the correct privileges.
 
-![Assign Groups](img/okta/rafay_group_okta.png)
+![Assign Groups](img/okta/group_okta.png)
 
 It is important to emphasize that because of SSO via Okta, user lifecycle management can be completely offloaded to the IdP. In the example below, note that there are no users managed in this group because they are all managed in the attached Okta Org.
 
-![Users in Group](img/okta/rafay_group_okta_no_users.png)
+![Users in Group](img/okta/group_okta_nousers.png)
 
 ---

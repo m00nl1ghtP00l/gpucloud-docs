@@ -1,6 +1,6 @@
 ---
-title: KOP Integrations - KeyCloak
-description: Official Rafay product documentation. Explore "KOP Integrations - KeyCloak" docs and more here. Rafay is a SaaS-first Kubernetes Operations Platform with enterprise-class scalability.
+title: Integrations - KeyCloak
+description: Configure Single Sign On (SSO) for users by integrating with KeyCloak.
 tags:
   - KeyCloak
   - IdP
@@ -54,7 +54,7 @@ The IdP configuration wizard will display critical information that you need to 
 - Login to your **KeyCloak** Org as an **Administrator**
 - Select **Clients** and click **Create**
 
-![Create Clients](img/keycloak/keycloak_1.png)
+![Create Clients](img/keycloak/keycloak1.png)
 
 - Copy/Paste the client ID (Assertion Consumer Service (ACS) URL) retrieved from Controller as described in Step 2
 - Select **saml** from the Client Protocol drop-down for Sign on method and click **Save**
@@ -113,7 +113,6 @@ Mappers allows the users to add the required details to the SAML data
 
 The **Group** configuration step is critical because it will ensure that KeyCloak sends the groups the user belongs to as part of the SSO process. The controller uses the group information to transparently map users to the correct group/role.
 
-
 ---
 
 ## Step 7: Specify IdP Metadata
@@ -127,11 +126,11 @@ Copy the "Identity Provider Metadata" URL from the KeyCloak App using the below 
 
 - Copy the URL and navigate back to the Web Console's IdP configuration wizard
 
-![IdP Metadata](img/keycloak/endpoint_url.png)
+![IdP Metadata](img/keycloak/endpoints_url.png)
 
 - Paste the Identity Provider Metadata URL from KeyCloak and click **Save & Exit** to complete the IdP Registration
 
-![Create App Integration](img/keycloak/metadata_idplink.png)
+![Create App Integration](img/keycloak/metadata_idp_link.png)
 
 - Once this process is complete, you can view details about the IdP configuration on the Identity Provider page.
 - You can also edit and update the configuration if required.  
@@ -152,22 +151,6 @@ An identically named group needs to be created on your Org. Ensure that this gro
 
 It is important to add user(s) to the KeyCloak group(s).
 
-![Users in Group](img/keycloak/keycloak-users.png)
-
----
-
-## Troubleshooting
-
-If the IdP registration results in an error, the issue will be observed during the login process. In such cases, export the Clients file from the screen below and edit the following parameters to resolve the issue:
-
-![Create Clients](img/keycloak/troubleshooting_1.png)
-
-```
-"defaultClientScopes": [
-        "web-origins",
-        "roles",
-        "profile",
-        "email"
-```
+![Users in Group](img/keycloak/keycloak-user.png)
 
 ---

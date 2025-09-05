@@ -1,101 +1,129 @@
 ---
 title: KOP Integrations - Webhook Configuration
-description: Official Rafay product documentation. Explore "KOP Integrations - Webhook Configuration" docs and more here. Rafay is a SaaS-first Kubernetes Operations Platform with enterprise-class scalability.
+description: Learn how administrators can configure webhooks for Identity Provider (IdP) integration, automate group assignments, and streamline Single Sign-On (SSO) user access.
 tags:
-  - Webhook 
-  - IdP
-  - Single Sign On (SSO)
+  - Webhook
+  - Identity Provider
+  - Single Sign-On (SSO)
+  - Admin Tasks
+  - Automation
 ---
 
-It is very common for organizations to require users to access the platform via Single Sign On (SSO) by authenticating with their corporate Identity Provider (IdP).
+It is common for organizations to require users to access the platform via **Single Sign-On (SSO)** using their corporate **Identity Provider (IdP)**.  
 
-The ideal IdP configuration will send an assertion that will include BOTH "authentication" and "authorization" (i.e. group) details. The "group" information allows the platform to seamlessly map the user to specific roles providing "Role based Access Control".
+Normally, the IdP sends both **authentication** and **authorization (group/role mapping)** details. However, in cases where the IdP cannot send group information, users may be authenticated but left without any role or access.  
 
-Sometimes, organizations are "unable to configure" their IdP to send "group" information to the platform as part of the SSO process. In these cases, although the user can be successfully authenticated into the platform, they will not have access to anything in the platform because a "role" cannot be automatically assigned.
+As an **Organization Admin**, you can configure **webhooks** to automatically handle such scenarios by assigning groups to new IdP users.
 
 ---
 
-## Override Groups
+## Handling New IDP Users (Override Groups)
 
-When a IDP user logs into the platform for the **"very first time"**, they will be put in a waiting room with no access to any projects or resources in the platform because the platform has no "role" assigned.
+When an IdP user logs into the platform for the **first time** without group mapping, they will have **no access**.  
 
-![No Access User](img/webhook/no_access.png)
+![No Access User](img/webhook/no_access.png)  
 
-The "new" IDP user has to contact the administrator and request to be added to specific groups. Administrators can easily add "overrides for groups for IdP users" once the IdP user has logged in "at least once" into the platform.
+As an admin, you can manually assign group overrides:
 
-- Navigate to System -> Users -> IDP Users
-- Select the IDP User
-
-![Group Override](img/webhook/group_override.png)
-
-- Click on "Manage Group"
-- Follow the process to add a "group override" for the IDP user
-
-![Assign Group Override](img/webhook/assign_group.png)
+1. Navigate to **System → Users → IDP Users**.  
+2. Select the IdP User.  
+![Group Override](img/webhook/groups_override.png)  
+3. Click on **Manage Group**.  
+4. Add the required **group overrides**.  
+![Assign Group Override](img/webhook/assign_group.png)  
 
 ---
 
 ## Turnkey Automation
 
-The workflow described above is a very manual, time consuming process for both the end user and the administrator and therefore impractical to perform at scale.
+To eliminate manual work, admins can configure **webhooks** that trigger automation workflows.  
 
-Organizations can leverage the webhooks to perform "end-to-end automation" where the "group" information for the new IDP user can be programmatically added to the controller literally immediately after the user successfully logs in. An illustrative workflow is shown below.
+With this approach:  
+- A webhook is triggered when a new IdP user logs in.  
+- A custom app (using **APIs, CLI, or Terraform Provider**) automatically adds group overrides.  
 
-![Webhook Automation](img/webhook/automation.png)
+![Webhook Automation](img/webhook/automation.png)  
 
+This provides **end-to-end automation**, ensuring users immediately receive the correct role assignments.
 
-The "custom app" can utilize one of the following mechanisms to perform the workflow automation to automate the "addition" of group overrides for the new IDP user.
-
-- Platform APIs
-- RCTL CLI
-- Terraform Provider
 
 ---
 
-## Prerequisites
-The below parameters can be specified for the webhook configuration
+## Prerequisites For Admins
 
-### Mandatory
-These fields are required.
+- **Webhook URL:** Endpoint for receiving webhook events.  
+- **Webhook Secret:** Used to sign webhook payloads.  
+- **Webhook Trigger Type:** Choose based on when you want automation to occur.  
+- **Webhook Payload (Optional):** Provide metadata fields or custom key-value pairs, e.g.  
 
-- **Webhook URL:** Used during user logins or per the webhook trigger type
+```json
+{
+  "optional_fields": ["first_name"],
+  "custom_payload": {
+    "key1": "value1",
+    "key2": "value2"
+  }
+}
+```
 
-- **Webhook Secret:** When consuming the webhook, the payload is signed using this secret
+---
 
-- **Webhook Trigger Type:** To customise the webhook consumption trigger
+## Webhook Setup
 
-### Optional
+1. Log in to the web console as an **Organization Admin**.  
+2. Navigate to **System → Identity Providers**.  
+3. Click on **New Identity Provider** → select **Webhook Configuration**.  
+4. Provide:  
+   - **Webhook URL**  
+   - **Webhook Secret**  
+   - **Webhook Trigger Type**  
+5. (Optional) Add **First Name, Last Name**, or custom key-value pairs for payload enrichment.  
 
-- **Webhook Payload:** A collection of optional fields and custom key-value pairs. Example: {“optional_fields”: [“first_name“], “custom_payload”:{“key1”:”value1”,“key2”:”value2”}}
+You can preview the **example payload** before saving.  
 
-The payload can provide useful metadata that the webhook receiver can use to make decisions.
+![Webhook Config](img/webhook/webhook_config.png)  
+
+---
+
+## Webhook Triggers
+
+Admins can configure when webhooks should be triggered:  
+
+- **None:** Never generate webhooks.  
+- **When users with no group are created:** Triggered only the first time an IdP user without groups is created.  
+- **When users with no groups log in:** Triggered for both first-time and repeated logins.  
+- **When SSO user logs in:** Triggered on **every login** attempt via IdP.  
+
+!!! Important  
+Admins can limit webhook triggers to specific scenarios. For example, only send when a **new IdP user** is detected.
 
 
 ----
 
-## Webhook Configuration
+## Webhook Setup
 
-- Login into the web console as an Organization Admin
-- Click on **System -> Identity Providers**
-- Click on **New Identity Provider** and select **Webhook Configuration**
-- Provide the **Webhook URL** and **Webhook Secret**
-- Select the required **Trigger Type** from the drop-down
+1. Log in to the web console as an **Organization Admin**.  
+2. Navigate to **System → Identity Providers**.  
+3. Click on **New Identity Provider** → select **Webhook Configuration**.  
+4. Provide:  
+   - **Webhook URL**  
+   - **Webhook Secret**  
+   - **Webhook Trigger Type**  
+5. (Optional) Add **First Name, Last Name**, **Trigger Type**, and **Custom key-value pairs** for payload enrichment.  
 
-	- **None:** Webhooks are never generated
+Preview the **example payload** before saving.  
 
-	- **When users with no group is created:** Triggered when an IDP user with no groups configured accesses the platform for the very first time.
+![Webhook Config](img/webhook/webhook_config.png)  
 
-	- **When user with no groups logs in:** Triggered when an IDP user without group association logs into the platform. This can be the first time or for subsequent access as well.
 
-	- **When SSO user logs in:** Triggered every time an IDP user logs into the platform.
+### Webhook Triggers
 
-- Optionally, select the First Name, Last Name, and Trigger Type
-- Optionally, add one or more key-value pair(s)
+Admins can configure when webhooks should be triggered:  
 
-Once all the details are selected, users can view the example payload as shown below
-
-![Create IdP](img/webhook/webhook_config.png)
-
+- **None:** Never generate webhooks.  
+- **When users with no group are created:** Triggered only the first time an IdP user without groups is created.  
+- **When users with no groups log in:** Triggered for both first-time and repeated logins.  
+- **When SSO user logs in:** Triggered on **every login** attempt via IdP.  
 
 !!! Important
 	Administrators can optionally configure webhooks to be sent ONLY when certain scenarios are encountered. For example, admins may wish to limit this to only when a new IDP user is seen by the platform.

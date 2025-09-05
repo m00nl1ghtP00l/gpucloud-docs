@@ -36,21 +36,24 @@ With the SP initiated flow, the user accesses the console first and is redirecte
 ```mermaid
 sequenceDiagram
     participant User
-    participant Console
+    participant Controller
     participant Identity Provider
 
-    User->>+Console: Access environment
-    Note right of Console: SSO enabled?
-    Console-->>+User: Redirect to IdP
-	rect rgb(191, 223, 255)
-    User->>+Identity Provider: Provide credentials
+    User->>Controller: Access Org(s)
+    Note right of Controller: SSO enabled for Org(s)?
+    Controller-->>User: Provides Org name if associated with multiple Orgs
+    Controller-->>User: Redirect User to IdP
+
+    rect rgb(230, 250, 250)
+    User->>Identity Provider: User Credentials
     Note right of Identity Provider: Authenticate User
-    Identity Provider-->>-User: Send Assertion & Group Info
+    Identity Provider-->>User: Send Assertion & Group Info
     end
-    Note left of User: Redirect User to Console
-    User-->>Console: IdP Assertion
-    Note right of Console: Map Group to Roles
-    Console-->>-User: Provide Role based Access
+
+    User-->>Controller: IdP Assertion
+    Note right of Controller: Map Group to Roles
+    Controller-->>User: Provide Role based Access
+```
 
 
 ---
