@@ -4,7 +4,7 @@ GPU Cloud Providers that are looking to launch their service will require end us
 
 The image below shows what the main navigation page would look like. 
 
-![Docs Screenshot](img/enduser_docs.png)
+![Docs Screenshot](enduser_docs.png)
 
 --- 
 ## Local Development Environment 
