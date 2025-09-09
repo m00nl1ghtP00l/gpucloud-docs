@@ -56,4 +56,4 @@ Options:
 
 ## Export to SIEM
 
-Audit logs (system, kubectl, OPA) can be streamed to a corporate SIEM for centralized monitoring.  See [SIEM Integration](../admins/siem/overview.md) for additional details.
+Audit logs can be streamed to a corporate SIEM for centralized monitoring.  See [SIEM Integration](../admins/siem/overview.md) for additional details.

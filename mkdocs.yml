@@ -161,7 +161,7 @@ nav:
     - 'Quota Management': 'admins/profile_quota.md'
     - 'Users': 'admins/users.md'
     - 'Groups': 'admins/groups.md'
-    - Single Sign On:
+    - 'Single Sign On':
         - "Overview": "admins/sso/overview.md"
         - "ADFS": "admins/sso/adfs.md"
         - "Authentik": "admins/sso/authentik.md"
@@ -172,8 +172,9 @@ nav:
         - "KeyCloak": "admins/sso/keycloak.md"
         - "Okta": "admins/sso/okta.md"
         - "Ping One": "admins/sso/ping.md"
-    - Audit Logs: "admins/audit.md"
-    - SIEM Integration: 
+    - 'Audit Logs': 
+        - "Overview": "admins/audit.md"
+    - 'SIEM Integration': 
       - 'Overview': "admins/siem/overview.md"
       - 'CloudWatch': "admins/siem/configure-cloudwatch.md"
       - 'Datadog': "admins/siem/configure-datadog.md"
