@@ -42,7 +42,7 @@ To create a new Inference Endpoint,
 
 ![Hierarchy](img/service-prof-list.png)
 
-Once the profile is selected, provide the required details. If pricing for the selected profile is configured in [Global Settings](../csp/global_settings.md) by the Org Admin, a monthly estimate will be displayed.
+Once the profile is selected, provide the required details. A monthly estimate will be displayed.
 
 - Provide a name for the Inference with an optional description
 - Select the desired **Workspace** from the dropdown list
