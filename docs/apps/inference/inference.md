@@ -15,13 +15,12 @@ tags:
 ---
 
 
-**Inference** refers to the process of using a trained AI/ML model to make predictions based on new input data. It plays a crucial role in machine learning workflows, as it enables models to provide valuable insights and automate decision-making in real-time or batch scenarios. Inference can be applied across various use cases, such as predicting customer behavior, classifying images, or detecting anomalies, depending on the specific business problem being addressed.
+**Inference** is the process of using a trained AI/ML model to generate predictions from new data. It is central to machine learning workflows, enabling real time or batch decision making for use cases such as image classification, anomaly detection, or customer behavior prediction.
 
-For users, the ability to deploy and manage inference endpoints is essential when they need to operationalize their models and scale AI/ML services. Users typically rely on this feature to deploy trained models into production environments for real-time inference, test models in development settings, or adjust the scale of inference services to meet growing demand. By centralizing the deployment and configuration process, the platform simplifies the operationalization of machine learning workflows, ensuring consistency, scalability, and security.
-
-The **Inference Endpoint Configuration** screen provides a seamless way to set up and manage inference endpoints. It offers a centralized interface to configure essential parameters, such as compute instances, API credentials, and cluster details. This eliminates the need for multiple tools and manual scripts, allowing users to define all necessary configurations in one place. The interface also integrates with existing clusters and cloud environments, optimizing resource utilization and enabling automation for tasks like blueprint application, scaling, and securing access via API keys. This functionality is ideal for ML engineers and data scientists who need a simple, efficient way to deploy, test, and scale their models across various environments.
+The platform provides an **Inference Endpoint Configuration** screen to deploy and manage models at scale. From a single interface, users can configure compute resources, API access, and cluster details without relying on separate tools or scripts. This streamlines model operationalization, ensuring consistency, scalability, and secure access for ML engineers and data scientists managing production or development environments.
 
 ---
+
 
 ## Create Inference Endpoints
 

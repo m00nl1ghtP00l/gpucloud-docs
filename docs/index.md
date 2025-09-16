@@ -14,7 +14,7 @@ description: Accelerate your AI/ML and GenAI Initiatives
 
     ---
 
-    Instant self-service provisioning of GPU-enabled bare metal servers. 
+    Instant self-service provisioning of GPU-enabled bare metal servers.
 
     [**Overview**](compute/bm/overview.md)
     [ | ]()
@@ -43,7 +43,7 @@ description: Accelerate your AI/ML and GenAI Initiatives
     [ | ]()
     [**Deploy & Use**](#)
     [ | ]()
-    [**Metrics**](compute/vm/metrics/approach.md) 
+    [**Metrics**](compute/vm/metrics/approach.md)
 
 -   :simple-kubernetes:{ .middle } __Managed Kubernetes__
 
@@ -62,7 +62,7 @@ description: Accelerate your AI/ML and GenAI Initiatives
 
     ---
 
-    Deploy custom containers from prebuilt templates in isolated environments enabling users to efficiently run CPU and GPU-intensive tasks. 
+    Deploy custom containers from prebuilt templates in isolated environments enabling users to efficiently run CPU and GPU-intensive tasks.
 
     [**Overview**](#)
 
@@ -82,9 +82,12 @@ description: Accelerate your AI/ML and GenAI Initiatives
 
     ---
 
-    Deploy and operate real-time AI inference for popular LLMs with support for hourly metering/billing. 
+    Deploy and operate real-time AI inference for popular LLMs with support for hourly metering/billing.
 
     [**Overview**](apps/inference/overview.md)
+    [ | ]()
+    [**Deploy & Use**](apps/inference/inference.md)
+
 
 </div>
 
@@ -96,7 +99,7 @@ description: Accelerate your AI/ML and GenAI Initiatives
 
     ---
 
-    Isolated, pre-configured environments to deploy/operate AI/ML workloads with built-in support for collaboration and secure resource sharing. 
+    Isolated, pre-configured environments to deploy/operate AI/ML workloads with built-in support for collaboration and secure resource sharing.
 
     [**Overview**](enduser/overview.md)
     [ | ]()
@@ -108,7 +111,7 @@ description: Accelerate your AI/ML and GenAI Initiatives
 
     ---
 
-    Centralized management of users, policies, and resources by the Org Administrators. 
+    Centralized management of users, policies, and resources by the Org Administrators.
 
     [**Orgs/Tenants**](admins/orgs.md)
     [ | ]()

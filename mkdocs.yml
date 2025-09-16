@@ -149,6 +149,7 @@ nav:
       - 'Overview': 'apps/notebook/config_nb.md'
     - Inference:
       - 'Overview': 'apps/inference/overview.md'
+      - 'Configure & Use': 'apps/inference/inference.md'
   - End Users:
     - 'Overview': 'enduser/overview.md'
     - 'Access': 'enduser/access.md'
@@ -172,11 +173,11 @@ nav:
         - "KeyCloak": "admins/sso/keycloak.md"
         - "Okta": "admins/sso/okta.md"
         - "Ping One": "admins/sso/ping.md"
-    - 'Audit Logs': 
+    - 'Audit Logs':
         - "Overview": "admins/audit.md"
-    - 'SIEM Integration': 
+    - 'SIEM Integration':
       - 'Overview': "admins/siem/overview.md"
       - 'CloudWatch': "admins/siem/configure-cloudwatch.md"
       - 'Datadog': "admins/siem/configure-datadog.md"
       - 'Splunk': "admins/siem/configure-splunk.md"
-      - 'Sumulogic': "admins/siem/configure-sumologic.md" 
+      - 'Sumulogic': "admins/siem/configure-sumologic.md"
