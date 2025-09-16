@@ -17,14 +17,16 @@ tags:
 
 **Inference** is the process of using a trained AI/ML model to generate predictions from new data. It is central to machine learning workflows, enabling real time or batch decision making for use cases such as image classification, anomaly detection, or customer behavior prediction.
 
-The platform provides an **Inference Endpoint Configuration** screen to deploy and manage models at scale. From a single interface, users can configure compute resources, API access, and cluster details without relying on separate tools or scripts. This streamlines model operationalization, ensuring consistency, scalability, and secure access for ML engineers and data scientists managing production or development environments.
+The platform provides an **Inference Endpoint Configuration** screen to deploy and manage models at scale. From a single interface, users can select a LLM from the provided list of LLMs, launch an Inference Endpoint and use it programmatically using OpenAI compatible APIs. 
+
+This streamlines model operationalization, ensuring consistency, scalability, and secure access for ML engineers and data scientists managing production or development environments.
 
 ---
 
 
 ## Create Inference Endpoints
 
-To create an inference endpoint, access the **Developer Hub** and navigate to the home page. The page provides options to create and manage inference endpoints, which are predefined configurations designed to simplify and accelerate the deployment of machine learning models as APIs. These profiles enable rapid prototyping and real-time predictions. On the Developer Hub home page, users can either click on **View All** to access the Inference Endpoints page or click on **New Inference Endpoint** to create a new inference endpoint. Users can also click on the **Inference Endpoints** menu on the left to directly access the Inference Endpoints page.
+To create an inference endpoint, login into the self service portal. The page provides options to create and manage inference endpoints, which are predefined configurations designed to simplify and accelerate the deployment of machine learning models as APIs. 
 
 ![Hierarchy](img/inferences_homepage.png)
 
@@ -49,7 +51,7 @@ Once the profile is selected, provide the required details. If pricing for the s
 
 ![Hierarchy](img/inferences_inputs.png)
 
-It can take a few minutes for the inference and associated software components to be deployed and ready for use.  
+Depending on the size of the selected LLM, it can take a few minutes for the inference and associated software components to be deployed and ready for use.  
 
 !!! info
     Users can deploy multiple inferences on an instance. The only constraint is whether the underlying instance has the resources required for all the inference.
@@ -61,16 +63,43 @@ It can take a few minutes for the inference and associated software components t
 
 ---
 
-## View Inferences
+## View Inference Endpoint 
 
-Clicking on the Inference Endpoints menu will list of all the inferences the user has access to. Note that inferences may span different workspaces and different instances. To view details about a specific inference, users just need to click on the name of the inference.
+Clicking on the Inference Endpoints menu will list of all the inference endpoints the user has access to. Note that inference endpoints may span different workspaces and different instances. To view details about a specific inference endpoint, users just need to click on the name of the inference.
 
 ![Inference in Browser](img/inf_views.png)
 
 
 ---
 
-## Delete Inference
+## Use & Access Inference Endpoint
+
+Clicking on a specific Inference Endpoint will display access information of the endpoint to the end user. You will be presented with the following information: 
+
+### Ready to use cURL Command 
+
+An illustrative example is shown below 
+
+```
+curl -X POST https://gemma-3-27b-it-0ea8s.inference.democloud.com/v1/completions \
+	-H "Content-Type: application/json" \
+	-H "Authorization: Bearer 98d7533d464f3c83b79b54e05d73dddf" \
+	-d '{
+	"model": "google/gemma-3-27b-it",
+	"prompt": "What is the full form of LLM?",
+	"max_tokens": "300"
+	}'
+```
+
+### Access Token 
+
+Users need to use this as the bearer token when they access the Inference endpoint programmatically. 
+
+![Use Inference Endpoint](img/inf_access.png)
+
+--- 
+
+## Delete Inference Endpoint
 
 To delete a Inference, users should click on the ellipses on the far right of the selected Inference and select delete.
 
