@@ -125,6 +125,8 @@ description: Accelerate your AI/ML and GenAI Initiatives
     [ | ]()
     [**Single Sign On (SSO)**](admins/sso/overview.md)
     [ | ]()
+    [**Quotas**](admins/profile_quota.md)
+    [ | ]()
     [**Audit Logs**](admins/audit.md)
     [ | ]()
     [**SIEM Integration**](admins/siem/overview.md)
