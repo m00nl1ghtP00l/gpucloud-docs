@@ -16,9 +16,38 @@ Quotas control how many instances of a Compute or Service Profile can be launche
 
 **Profile quotas** are applied at three levels:
 
-- **Organization-Level Quota**: Sets a global cap on the number of profile instances across the entire organization.
-- **Project-Level Quota**: Limits the number of instances that can be launched within a specific project.
-- **User-Level Quota**: Further restricts the number of instances each user can launch under a project.
+### Organization-Level Quota
+
+The Org Admin decides how to distribute the assigned quota across multiple projects or teams.
+
+For example, if the organization has a total quota of **200 instances**, the Org Admin may allocate:
+- **120 instances** to Project A (expected to have heavier workloads)
+- **80 instances** to Project B
+
+This ensures that resources are distributed based on anticipated usage.
+
+---
+
+### Project-Level Quota
+
+Each project receives its share of the overall org quota, as defined by the Org Admin.
+
+For example, within Project A’s allocation of **120 instances**, the Admin may further divide:
+- **80 instances** for the Development team
+- **40 instances** for the QA team
+
+This ensures that no single group consumes the entire project allocation.
+
+---
+
+### User-Level Quota
+
+To prevent an individual user from exhausting all project resources, the Org Admin can set per-user limits.
+
+For example, within the QA team’s **40-instance** quota:
+- Each user may be limited to **5 instances** maximum.
+
+This ensures fair usage and prevents one user from consuming the team’s full allocation.
 
 This multi-level quota system provides fine-grained control over resource usage and simplifies profile instance governance across teams and users.
 
@@ -64,8 +93,8 @@ __Configure via Project Settings UI__
 - Click the **Settings** icon in the controller for the desired project and select the **Profile Quotas** tab.
 - Click **+ Add Quota** to add a quota for either Compute Profile or Service Profile, depending on your requirement.
 - In the Add Compute Profile Quota dialog:
-    - **Select Profile**: Choose the compute profile.
-    - **Profile Max Instances**: Enter the total number of instances allowed across the project (e.g., 100).
+    - **Select Profile**: Choose the compute profile.
+    - **Profile Max Instances**: Enter the total number of instances allowed across the project (e.g., 100).
 - Click **Save Changes** to apply the quota settings.
 
 ![Access Control for Projects](img/comp_quota.png)
@@ -85,9 +114,9 @@ __Configure via Project Settings UI__
 - Click the **Settings** icon in the controller for the desired project and select the **Profile Quotas** tab.
 - Click **+ Add Quota** to add a quota for either Compute Profile or Service Profile, depending on your requirement.
 - In the Add Compute Profile Quota dialog:
-    - **Select Profile**: Choose the compute profile.
-    - **Profile Max Instances**: Enter the total number of instances allowed across the project (e.g., 100).
-    - **Users Max Instances**: Specify the maximum number of instances a single user can launch within the project (for example, 50).
+    - **Select Profile**: Choose the compute profile.
+    - **Profile Max Instances**: Enter the total number of instances allowed across the project (e.g., 100).
+    - **Users Max Instances**: Specify the maximum number of instances a single user can launch within the project (for example, 50).
 - Click **Save Changes** to apply the quota settings.
 
 ![Access Control for Projects](img/user_quotas.png)
