@@ -37,6 +37,10 @@ We recommend using a virtual environment, which is an isolated Python runtime. A
 python3 -m venv rafay-venv
 ```
 
+> [!IMPORTANT]
+> You do not have to create the virtual environment everytime. Activate the environment instead by following the steps in the section below
+
+
 **Check Dependencies**
 
 A newly created virtual environment will not have any packages installed yet. You can verify by using the following command which should not produce any results. 
@@ -44,9 +48,6 @@ A newly created virtual environment will not have any packages installed yet. Yo
 ``` bash
 pip3 freeze
 ```
-
-> [!IMPORTANT]
-> You do not have to create the virtual environment everytime. Activate the environment instead by following the steps in the section below
 
 ### Step 4: Install Mkdocs Material
 We use [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). This is a powerful documentation framework on top of MkDocs, a static site generator for project documentation. Since the raw content is markdown and PNG files, users can 
