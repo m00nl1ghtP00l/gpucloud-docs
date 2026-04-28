@@ -9,7 +9,7 @@ tags:
 
 The image below outlines the architecture and approach used by Rafay to centrally aggregate GPU and Server telemetry from end user bare metal servers hosted in the cloud provider's datacenter. The metrics are aggregated using [OpenTelemetry (OTel)](https://opentelemetry.io/) and synchronized to a centralized **Time Series Database** at the Rafay Controller for end-user visualization and analytics.
 
-![Metrics Flow Architecture](../metrics/img/bm_metrics_pipeline.png)
+![Metrics Flow Architecture](img/bm_metrics_pipeline.png)
 
 !!! info
     Only Ubuntu 22.04 and 24.04 OS based Bare Metal Servers are currently supported for integrated metrics. 

@@ -99,6 +99,18 @@ INFO     -  [07:59:27] Serving on http://127.0.0.1:8000/
 
 Open a web browser and navigate to "http://127.0.0.1:8000/". 
 
+### BMaaS-Only Docs Variant
+
+Use the BMaaS-specific MkDocs config to preview or build a docs version that only includes Bare Metal Server content.
+
+``` bash
+mkdocs serve -f mkdocs.bmaas.yml
+```
+
+``` bash
+mkdocs build -f mkdocs.bmaas.yml --strict
+```
+
 ## White Labeling 
 
 ### Basic Information 

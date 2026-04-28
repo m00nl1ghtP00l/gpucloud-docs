@@ -213,7 +213,3 @@ tags:
 
 </div>
 
-<!---
-Back Button
--->
-[← Back](../../index.md){ .md-button .md-button--primary }
